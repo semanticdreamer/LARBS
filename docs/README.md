@@ -1,4 +1,4 @@
-# A THANKFUL Fork of Luke's **UBER AWESOME** Auto-Rice Bootstraping Scripts (LARBS)
+# A shamelessly thankful Fork of Luke's **UBER AWESOME** Auto-Rice Bootstraping Scripts (LARBS)
 
 [Official Website: larbs.xyz](https://larbs.xyz)
 
