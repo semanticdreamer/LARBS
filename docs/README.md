@@ -1,4 +1,4 @@
-# Luke's Auto-Rice Bootstraping Scripts (LARBS)
+# FORK of Luke's ** UBER AWESOME** Auto-Rice Bootstraping Scripts (LARBS)
 
 [Official Website: larbs.xyz](https://larbs.xyz)
 
@@ -8,6 +8,11 @@ install and configure all of the prerequisites for an advanced Linux desktop
 environment, using my configs [here](https://github.com/LukeSmithxyz/voidrice)
 as a base.
 
+
+## Changes oin this Fork
+
+- set locale to `en_DK.*` (instead of `en_US.*` for sanity w/ european formats and metrics)
+- added two more lazy scripts to automatically install Arch on *NVMe*s –› `arch-nvme{0|1}n1.sh`
 
 ## Table of Contents
 
@@ -42,7 +47,7 @@ Blender, etc.).
 This is just as easy. Log in as the root user and run the following.
 
 ```sh
-curl -LO https://larbs.xyz/larbs.sh #Downloads the script.
+curl -LO https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/larbs.sh #Downloads the script.
 bash larbs.sh #Runs it.
 ```
 
@@ -71,9 +76,25 @@ non-backed up data on your machine, I don't advise running it unless you don't
 mind a full wipe. That said, you can run it like this after booting into an Arch
 live environment:
 
+For `/dev/sda`:
+
 ```sh
-curl -LO https://larbs.xyz/arch.sh #Downloads the script.
+curl -LO https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/arch.sh #Downloads the script.
 bash arch.sh #Runs it.
+```
+
+Alternative for `/dev/nvme0n1`:
+
+```sh
+curl -LO https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/arch-nvme0n1.sh #Downloads the script.
+bash arch-nvme0n1.sh #Runs it.
+```
+
+Alternative for `/dev/nvme1n1`:
+
+```sh
+curl -LO https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/arch-nvme1n1.sh #Downloads the script.
+bash arch-nvme1n1.sh #Runs it.
 ```
 
 After the system installs, you'll have the option of bootstrapping automatically
