@@ -1,4 +1,4 @@
-# FORK of Luke's ** UBER AWESOME** Auto-Rice Bootstraping Scripts (LARBS)
+# A THANKFUL Fork of Luke's **UBER AWESOME** Auto-Rice Bootstraping Scripts (LARBS)
 
 [Official Website: larbs.xyz](http://larbs.xyz)
 
@@ -8,8 +8,7 @@ install and configure all of the prerequisites for an advanced Linux desktop
 environment, using my configs [here](https://github.com/LukeSmithxyz/voidrice)
 as a base.
 
-
-## Changes oin this Fork
+## Changes in this Fork
 
 - set locale to `en_DK.*` (instead of `en_US.*` for sanity w/ european formats and metrics)
 - added two more lazy scripts to automatically install Arch on *NVMe*s –› `arch-nvme{0|1}n1.sh`
