@@ -5,7 +5,7 @@
 #DO NOT RUN THIS YOURSELF because Step 1 is it reformatting /dev/nvme1n1 WITHOUT confirmation,
 #which means RIP in peace qq your data unless you've already backed up all of your drive.
 
-#Credits to because pointers taken from:
+#Credits to, because pointers taken from:
 #https://github.com/LukeSmithxyz/LARBS
 #https://github.com/wrzlbrmft/arch-install
 #https://github.com/goldsloam/archinstaller
