@@ -15,7 +15,7 @@ RED='\033[0;31m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
-dialog --defaultno --title "DON'T BE A BRAINLET!" --yesno "This is an Arch install script that is very rough around the edges.\n\nOnly run this script if you're a big-brane who doesn't mind deleting your entire /dev/nvme1n1 drive.\n\nThis script is only really for me so I can autoinstall Arch.\n\nt. Matthias"  15 60 || exit
+dialog --defaultno --title "DON'T BE A BRAINLET!" --yesno "This is an Arch install script that is very rough around the edges.\n\nOnly run this script if you're a big-brane who doesn't mind deleting your entire /dev/nvme1n1 drive.\n\nThis script is only really for me so I can autoinstall Arch.\n\n Matthias"  15 60 || exit
 
 dialog --defaultno --title "DON'T BE A BRAINLET!" --yesno "Do you think I'm meming? Only select yes to DELET your entire /dev/nvme1n1 and reinstall Arch.\n\nTo stop this script, press no."  10 60 || exit
 
@@ -26,10 +26,10 @@ timedatectl set-ntp true
 echo "partitioning drive..."
 sleep 2
 sgdisk -og /dev/nvme1n1
-sgdisk -n 1:2048:+512MiB -t 1:ef00 /dev/nvme1n1
+sgdisk -n 1:2048:+512MiB -t 1:ef00 /dev/nvme1n1p1
 start_of='sgdisk -f /dev/nvme1n1'
 end_of='sgdisk -E /dev/nvme1n1'
-sgdisk -n 2:$start_of:$end_of -t 2:8e00 /dev/nvme1n1
+sgdisk -n 2:$start_of:$end_of -t 2:8e00 /dev/nvme1n1p2
 sgdisk -p /dev/nvme1n1
 
 echo "cryptsetup (luks) and lvm..."
