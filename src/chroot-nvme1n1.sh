@@ -7,7 +7,7 @@ ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 hwclock --systohc
 
 echo "en_DK.UTF-8 UTF-8" >> /etc/locale.gen
-echo "en_DK ISO-8859-1" >> /etc/locale.gen
+echo "en_DK.ISO-8859-1 ISO-8859-1" >> /etc/locale.gen
 locale-gen
 
 pacman --noconfirm --needed -S networkmanager
