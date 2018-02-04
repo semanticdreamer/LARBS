@@ -63,6 +63,9 @@ mount /dev/nvme1n1p1 /mnt/boot
 mkdir /mnt/home
 mount /dev/nvme1n1p4 /mnt/home
 
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup
+rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
 
 pacstrap /mnt base base-devel
 
