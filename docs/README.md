@@ -82,26 +82,19 @@ curl -LO https://raw.github.com/semanticdreamer/LARBS/master/src/arch.sh #Downlo
 bash arch.sh #Runs it.
 ```
 
-Alternative for `/dev/nvme0n1`:
+Alternative for `/dev/nvme0n1` (default) w/ option to edit the file and set e.g. `INSTALL_DEVICE=/dev/nvme1n1`:
 
 ```sh
-curl -LO https://raw.github.com/semanticdreamer/LARBS/master/src/arch-nvme0n1.sh #Downloads the script.
-bash arch-nvme0n1.sh #Runs it.
+curl -LO https://raw.github.com/semanticdreamer/LARBS/master/src/arch-nvme.sh #Downloads the script.
+bash arch-nvme.sh #Runs it.
 ```
 
-Alternative for `/dev/nvme1n1`:
+Alternative for `/dev/nvme0n1` with full Luks LVM2 Disk Encryption and systemd-boot (a.k.a gummiboot) for **EFI Loader**:
+
+**WARNING: WORK-IN-PROGRESS... TESTING, NOT QUITE STABLE YET!!!**
 
 ```sh
-curl -LO https://raw.github.com/semanticdreamer/LARBS/master/src/arch-nvme1n1.sh #Downloads the script.
-bash arch-nvme1n1.sh #Runs it.
-```
-
-Alternative for `/dev/nvme1n1` with full Luks LVM2 Disk Encryption and systemd-boot (a.k.a gummiboot) for EFI Loader:
-
-**WARNING: WORK-IN-PROGRESS... TESTING, NOT STABLE YET!!!**
-
-```sh
-curl -LO https://raw.github.com/semanticdreamer/LARBS/master/src/arch-nvme1n1-efi-lvm-luks.sh #Downloads the script.
+curl -LO https://raw.github.com/semanticdreamer/LARBS/master/src/arch-nvme-efi-lvm-luks.sh #Downloads the script.
 bash arch-nvme1n1-efi-lvm-luks.sh #Runs it.
 ```
 

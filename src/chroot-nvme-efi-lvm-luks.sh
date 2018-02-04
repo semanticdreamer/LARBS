@@ -28,7 +28,7 @@ bootctl --path=/boot install
 > /boot/loader/loader.conf
 echo "default arch" >> /boot/loader/loader.conf
 echo "timeout 5" >> /boot/loader/loader.conf
-LUKS_UUID="$(cryptsetup luksUUID /dev/nvme1n1p2)"
+LUKS_UUID="$(cryptsetup luksUUID $(cat idevice))"
 touch /boot/loader/entries/arch.conf
 echo "title Arch Linux" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
