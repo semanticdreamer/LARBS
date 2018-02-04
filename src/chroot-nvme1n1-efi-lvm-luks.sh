@@ -35,11 +35,11 @@ echo "timeout 0" >> /boot/loader/loader.conf
 echo "editor 0" >> /boot/loader/loader.conf
 datUUID=blkid | sed -n '/nvme1n1p2/s/.*UUID=\"\([^\"]*\)\".*/\1/p'
 touch /boot/loader/entries/arch.conf
-echo "title Arch Linux" >> /boot/loader/entries/arch.conf
+echo "title Arch Linux Encrypted LVM" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /intel-ucode.img" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-echo "options cryptdevice=UUID=$datUUID:arch:allow-discards root=/dev/mapper/arch-root quiet rw" >> /boot/loader/entries/arch.conf
+echo "options cryptdevice=PARTUUID=$datUUID:arch:allow-discards root=/dev/mapper/arch-root resume=/dev/mapper/arch-swap quiet rw intel_pstate=no_hwp" >> /boot/loader/entries/arch.conf
 echo "arch UUID=$datUUID none luks,discard" > /etc/crypttab
 
 pacman --noconfirm --needed -S dialog
