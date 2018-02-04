@@ -14,7 +14,7 @@ echo "ranking mirrors..."
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 rankmirrors -n 5 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
 
-pacman --noconfirm --needed -S networkmanager
+pacman --noconfirm --needed -S networkmanager intel-ucode
 systemctl enable NetworkManager
 systemctl start NetworkManager
 
