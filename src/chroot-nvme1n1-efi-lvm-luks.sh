@@ -14,7 +14,7 @@ echo "ranking mirrors..."
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 rankmirrors -n 5 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
 
-pacman --noconfirm --needed -S networkmanager intel-ucode
+pacman --noconfirm --needed -S networkmanager intel-ucode dosfstools efibootmgr
 systemctl enable NetworkManager
 systemctl start NetworkManager
 
@@ -31,16 +31,15 @@ sleep 5
 bootctl --path=/boot install
 > /boot/loader/loader.conf
 echo "default arch" >> /boot/loader/loader.conf
-echo "timeout 0" >> /boot/loader/loader.conf
-echo "editor 0" >> /boot/loader/loader.conf
-datUUID=blkid | sed -n '/nvme1n1p2/s/.*UUID=\"\([^\"]*\)\".*/\1/p'
+echo "timeout 5" >> /boot/loader/loader.conf
+LUKS_UUID="$(cryptsetup luksUUID /dev/nvme1n1p2)"
 touch /boot/loader/entries/arch.conf
-echo "title Arch Linux Encrypted LVM" >> /boot/loader/entries/arch.conf
+echo "title Arch Linux" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /intel-ucode.img" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-echo "options cryptdevice=UUID=$datUUID:arch:allow-discards root=/dev/mapper/arch-root resume=/dev/mapper/arch-swap quiet rw intel_pstate=no_hwp" >> /boot/loader/entries/arch.conf
-echo "arch UUID=$datUUID none luks,discard" > /etc/crypttab
+echo "options quiet cryptdevice=UUID=$LUKS_UUID:arch:allow-discards root=/dev/mapper/arch-root rw" >> /boot/loader/entries/arch.conf
+echo "arch UUID=$LUKS_UUID none luks,discard" > /etc/crypttab
 
 pacman --noconfirm --needed -S dialog
 larbs() { curl -LO http://larbs.xyz/larbs.sh && bash larbs.sh ;}
