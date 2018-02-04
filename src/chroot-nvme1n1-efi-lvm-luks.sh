@@ -11,7 +11,7 @@ echo "en_DK.ISO-8859-1 ISO-8859-1" >> /etc/locale.gen
 locale-gen
 
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-rankmirros -n 5 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
+rankmirrors -n 5 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
 
 pacman --noconfirm --needed -S networkmanager
 systemctl enable NetworkManager
