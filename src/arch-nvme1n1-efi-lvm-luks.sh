@@ -50,7 +50,7 @@ sgdisk -p /dev/nvme1n1
 
 echo "cryptsetup (luks) and lvm..."
 sleep 5
-cryptsetup luksFormat /dev/nvme1n1p2
+cryptsetup -c aes-xts-plain64 -h sha512 -s 512 --use-random luksFormat /dev/nvme1n1p2
 cryptsetup --allow-discards luksOpen /dev/nvme1n1p2 "$(cat comp)-opsecftw"
 pvcreate --dataalignment 1m "/dev/mapper/$(cat comp)-opsecftw"
 vgcreate arch "/dev/mapper/$(cat comp)-opsecftw"
