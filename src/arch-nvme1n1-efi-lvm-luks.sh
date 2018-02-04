@@ -30,8 +30,6 @@ dialog --no-cancel --inputbox "Enter a name for your computer." 10 60 2> comp
 
 timedatectl set-ntp true
 
-echo "partitioning drive..."
-sleep 5
 sgdisk -og /dev/nvme1n1
 sgdisk -n 1:2048:+512MiB -t 1:ef00 /dev/nvme1n1
 start_of=`sgdisk -f /dev/nvme1n1`
@@ -39,8 +37,6 @@ end_of=`sgdisk -E /dev/nvme1n1`
 sgdisk -n "2:$start_of:$end_of" -t 2:8e00 /dev/nvme1n1
 sgdisk -p /dev/nvme1n1
 
-echo "cryptsetup (luks) and lvm..."
-sleep 5
 cryptsetup luksFormat /dev/nvme1n1p2
 cryptsetup --allow-discards luksOpen /dev/nvme1n1p2 "$(cat comp)-opsecftw"
 pvcreate --dataalignment 1m "/dev/mapper/$(cat comp)-opsecftw"
@@ -49,27 +45,24 @@ lvcreate -L 100GB arch -n root
 lvcreate -L 16GB arch -n swap
 lvcreate -l 100%FREE arch -n home
 
-echo "activating lvm..."
-sleep 5
 modprobe dm_mod
 vgscan
 vgchange -ay
 
-echo "formatting partitions..."
-sleep 5
 mkfs.fat -F32 /dev/nvme1n1p1
 mkfs.ext4 /dev/arch/root
 mkfs.ext4 /dev/arch/home
 mkswap /dev/arch/swap
 swapon --discard /dev/arch/swap
 
-echo "mounting drives..."
-sleep 5
 mount -o discard /dev/arch/root /mnt
 mkdir /mnt/boot
 mkdir /mnt/home
 mount -o discard /dev/nvme1n1p1 /mnt/boot
 mount -o discard /dev/arch/home /mnt/home
+
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+rankmirros -n 5 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
 
 pacstrap /mnt base base-devel
 
