@@ -28,6 +28,15 @@ dialog --defaultno --title "DON'T BE A BRAINLET!" --yesno "Do you think I'm memi
 
 dialog --no-cancel --inputbox "Enter a name for your computer." 10 60 2> comp
 
+dialog --no-cancel --inputbox "Enter partitionsize in gb, separated by space for root and swap; 100% of free will become home." 10 60 2>psize
+
+IFS=' ' read -ra SIZE <<< $(cat psize)
+
+re='^[0-9]+$'
+if ! [ ${#SIZE[@]} -eq 2 ] || ! [[ ${SIZE[0]} =~ $re ]] || ! [[ ${SIZE[1]} =~ $re ]] ; then
+    SIZE=(30 1);
+fi
+
 timedatectl set-ntp true
 
 echo "partitioning drive..."
@@ -45,8 +54,8 @@ cryptsetup luksFormat /dev/nvme1n1p2
 cryptsetup --allow-discards luksOpen /dev/nvme1n1p2 "$(cat comp)-opsecftw"
 pvcreate --dataalignment 1m "/dev/mapper/$(cat comp)-opsecftw"
 vgcreate arch "/dev/mapper/$(cat comp)-opsecftw"
-lvcreate -L 50GB arch -n root
-lvcreate -L 1GB arch -n swap
+lvcreate -L "${SIZE[0]}GB arch" -n root
+lvcreate -L "${SIZE[1]}GB arch" -n swap
 lvcreate -l 100%FREE arch -n home
 
 echo "activating lvm..."
