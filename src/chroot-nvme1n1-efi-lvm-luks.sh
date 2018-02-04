@@ -39,7 +39,7 @@ echo "title Arch Linux Encrypted LVM" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /intel-ucode.img" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-echo "options cryptdevice=PARTUUID=$datUUID:arch:allow-discards root=/dev/mapper/arch-root resume=/dev/mapper/arch-swap quiet rw intel_pstate=no_hwp" >> /boot/loader/entries/arch.conf
+echo "options cryptdevice=UUID=$datUUID:arch:allow-discards root=/dev/mapper/arch-root resume=/dev/mapper/arch-swap quiet rw intel_pstate=no_hwp" >> /boot/loader/entries/arch.conf
 echo "arch UUID=$datUUID none luks,discard" > /etc/crypttab
 
 pacman --noconfirm --needed -S dialog
