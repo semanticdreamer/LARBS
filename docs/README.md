@@ -46,7 +46,7 @@ Blender, etc.).
 This is just as easy. Log in as the root user and run the following.
 
 ```sh
-curl -LO https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/larbs.sh #Downloads the script.
+curl -LO https://raw.github.com/semanticdreamer/LARBS/master/src/larbs.sh #Downloads the script.
 bash larbs.sh #Runs it.
 ```
 
@@ -78,21 +78,21 @@ live environment:
 For `/dev/sda`:
 
 ```sh
-curl -LO https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/arch.sh #Downloads the script.
+curl -LO https://raw.github.com/semanticdreamer/LARBS/master/src/arch.sh #Downloads the script.
 bash arch.sh #Runs it.
 ```
 
 Alternative for `/dev/nvme0n1`:
 
 ```sh
-curl -LO https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/arch-nvme0n1.sh #Downloads the script.
+curl -LO https://raw.github.com/semanticdreamer/LARBS/master/src/arch-nvme0n1.sh #Downloads the script.
 bash arch-nvme0n1.sh #Runs it.
 ```
 
 Alternative for `/dev/nvme1n1`:
 
 ```sh
-curl -LO https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/arch-nvme1n1.sh #Downloads the script.
+curl -LO https://raw.github.com/semanticdreamer/LARBS/master/src/arch-nvme1n1.sh #Downloads the script.
 bash arch-nvme1n1.sh #Runs it.
 ```
 
@@ -101,7 +101,7 @@ Alternative for `/dev/nvme1n1` with full Luks LVM2 Disk Encryption and systemd-b
 **WARNING: WORK-IN-PROGRESS... TESTING, NOT STABLE YET!!!**
 
 ```sh
-curl -LO https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/arch-nvme1n1-efi-lvm-luks.sh #Downloads the script.
+curl -LO https://raw.github.com/semanticdreamer/LARBS/master/src/arch-nvme1n1-efi-lvm-luks.sh #Downloads the script.
 bash arch-nvme1n1-efi-lvm-luks.sh #Runs it.
 ```
 
