@@ -9,6 +9,11 @@
 #https://github.com/LukeSmithxyz/LARBS
 #https://github.com/wrzlbrmft/arch-install
 #https://github.com/goldsloam/archinstaller
+#https://github.com/HardenedArray/Encrypted-Arch-UEFI-Installation
+
+#
+# ** WARNING ** THIS IS WORK-IN-PROGRESS — CLEARLY !! NOT !! intended for any other use than my tinkering w/ an semi-automated Arch install
+#
 
 pacman -S --noconfirm dialog || (echo "Error at script start: Are you sure you're running this as the root user? Are you sure you have an internet connection?" && exit)
 RED='\033[0;31m'
