@@ -96,6 +96,15 @@ curl -LO https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/arch
 bash arch-nvme1n1.sh #Runs it.
 ```
 
+Alternative for `/dev/nvme1n1` with full Luks LVM2 Disk Encryption and systemd-boot (a.k.a gummiboot) for EFI Loader:
+
+**WARNING: WORK-IN-PROGRESS... TESTING, NOT STABLE YET!!!**
+
+```sh
+curl -LO https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/arch-nvme1n1-efi-lvm-luks.sh #Downloads the script.
+bash arch-nvme1n1-efi-lvm-luks.sh #Runs it.
+```
+
 After the system installs, you'll have the option of bootstrapping automatically
 into installing my configs as well.
 
