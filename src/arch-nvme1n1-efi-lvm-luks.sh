@@ -36,7 +36,7 @@ sgdisk -og /dev/nvme1n1
 sgdisk -n 1:2048:+512MiB -t 1:ef00 /dev/nvme1n1
 start_of=`sgdisk -f /dev/nvme1n1`
 end_of=`sgdisk -E /dev/nvme1n1`
-sgdisk -n 2:$start_of:$end_of -t 2:8e00 /dev/nvme1n1
+sgdisk -n "2:$start_of:$end_of" -t 2:8e00 /dev/nvme1n1
 sgdisk -p /dev/nvme1n1
 
 echo "cryptsetup (luks) and lvm..."
