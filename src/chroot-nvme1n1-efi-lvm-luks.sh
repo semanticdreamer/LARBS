@@ -10,6 +10,9 @@ echo "en_DK.UTF-8 UTF-8" >> /etc/locale.gen
 echo "en_DK.ISO-8859-1 ISO-8859-1" >> /etc/locale.gen
 locale-gen
 
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+rankmirros -n 5 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
+
 pacman --noconfirm --needed -S networkmanager
 systemctl enable NetworkManager
 systemctl start NetworkManager
