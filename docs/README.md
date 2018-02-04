@@ -96,7 +96,7 @@ Alternative for `/dev/nvme0n1` with full Luks LVM2 Disk Encryption and systemd-b
 
 ```sh
 curl -LO https://raw.github.com/semanticdreamer/LARBS/master/src/arch-nvme-efi-lvm-luks.sh #Downloads the script.
-bash arch-nvme1n1-efi-lvm-luks.sh #Runs it.
+bash arch-nvme-efi-lvm-luks.sh #Runs it.
 ```
 
 After the system installs, you'll have the option of bootstrapping automatically
