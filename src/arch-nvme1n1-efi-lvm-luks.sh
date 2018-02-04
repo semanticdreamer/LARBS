@@ -72,7 +72,7 @@ mount -o discard /dev/nvme1n1p1 /mnt/boot
 mount -o discard /dev/arch/home /mnt/home
 
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-rankmirros -n 5 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
+rankmirrors -n 5 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
 
 pacstrap /mnt base base-devel
 
