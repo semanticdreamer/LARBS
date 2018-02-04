@@ -33,7 +33,7 @@ bootctl --path=/boot install
 echo "default arch" >> /boot/loader/loader.conf
 echo "timeout 0" >> /boot/loader/loader.conf
 echo "editor 0" >> /boot/loader/loader.conf
-datUUID=blkid | sed -n '/nvme1n1/s/.*UUID=\"\([^\"]*\)\".*/\1/p'
+datUUID=blkid | sed -n '/nvme1n1p2/s/.*UUID=\"\([^\"]*\)\".*/\1/p'
 touch /boot/loader/entries/arch.conf
 echo "title Arch Linux" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
