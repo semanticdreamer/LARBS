@@ -71,6 +71,7 @@ mkdir /mnt/home
 mount -o discard /dev/nvme1n1p1 /mnt/boot
 mount -o discard /dev/arch/home /mnt/home
 
+echo "ranking mirrors..."
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 rankmirrors -n 5 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
 

@@ -10,6 +10,7 @@ echo "en_DK.UTF-8 UTF-8" >> /etc/locale.gen
 echo "en_DK.ISO-8859-1 ISO-8859-1" >> /etc/locale.gen
 locale-gen
 
+echo "ranking mirrors..."
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 rankmirrors -n 5 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
 
@@ -17,9 +18,8 @@ pacman --noconfirm --needed -S networkmanager
 systemctl enable NetworkManager
 systemctl start NetworkManager
 
-
 echo "initramfs creation..."
-sleep 2
+sleep 5
 file=/mnt/archbox/etc/mkinitcpio.conf
 search="^\s*HOOKS=.*$"
 replace="HOOKS=\\\"base udev autodetect modconf block keymap encrypt lvm2 filesystems keyboard shutdown fsck usr\\\""
@@ -27,6 +27,7 @@ grep -q "$search" "$file" && sed -i "s#$search#$replace#" "$file" || echo "$repl
 mkinitcpio -p linux
 
 echo "installing bootctl..."
+sleep 5
 bootctl --path=/boot install
 > /boot/loader/loader.conf
 echo "default arch" >> /boot/loader/loader.conf
