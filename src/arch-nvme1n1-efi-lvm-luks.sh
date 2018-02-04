@@ -45,8 +45,8 @@ cryptsetup luksFormat /dev/nvme1n1p2
 cryptsetup --allow-discards luksOpen /dev/nvme1n1p2 "$(cat comp)-opsecftw"
 pvcreate --dataalignment 1m "/dev/mapper/$(cat comp)-opsecftw"
 vgcreate arch "/dev/mapper/$(cat comp)-opsecftw"
-lvcreate -L 100GB arch -n root
-lvcreate -L 16GB arch -n swap
+lvcreate -L 50GB arch -n root
+lvcreate -L 1GB arch -n swap
 lvcreate -l 100%FREE arch -n home
 
 echo "activating lvm..."
