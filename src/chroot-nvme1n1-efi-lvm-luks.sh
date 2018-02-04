@@ -10,10 +10,6 @@ echo "en_DK.UTF-8 UTF-8" >> /etc/locale.gen
 echo "en_DK.ISO-8859-1 ISO-8859-1" >> /etc/locale.gen
 locale-gen
 
-echo "ranking mirrors..."
-cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-rankmirrors -n 5 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
-
 pacman --noconfirm --needed -S networkmanager intel-ucode dosfstools efibootmgr
 systemctl enable NetworkManager
 systemctl start NetworkManager
