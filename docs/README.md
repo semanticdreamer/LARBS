@@ -10,8 +10,9 @@ as a base.
 
 ## Changes in this Fork
 
-- set locale to `en_DK.*` (instead of `en_US.*` for sanity w/ european formats and metrics)
-- added two more lazy scripts to automatically install Arch on *NVMe*s –› `arch-nvme{0|1}n1.sh`
+- set locale to `en_DK.*` (instead of `en_US.*` for sanity w/ european formats, metrics et al.)
+- added one extra lazy script to automatically install Arch on *NVMe*s –› `arch-nvme.sh`
+- added yet another lazy script to automatically install Arch on *NVMe*s with full Luks LVM2 Disk Encryption and systemd-boot (a.k.a gummiboot) for **EFI Loader**
 
 ## Table of Contents
 
