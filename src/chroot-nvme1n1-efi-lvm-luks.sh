@@ -35,8 +35,8 @@ echo "title Arch Linux" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /intel-ucode.img" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-echo "options cryptdevice=UUID=$datUUID:volume:allow-discards root=/dev/mapper/volume-root quiet rw" >> /boot/loader/entries/arch.conf
-echo "volume UUID=$datUUID none luks,discard" > /etc/crypttab
+echo "options cryptdevice=UUID=$datUUID:arch:allow-discards root=/dev/mapper/arch-root quiet rw" >> /boot/loader/entries/arch.conf
+echo "arch UUID=$datUUID none luks,discard" > /etc/crypttab
 
 pacman --noconfirm --needed -S dialog
 larbs() { curl -LO http://larbs.xyz/larbs.sh && bash larbs.sh ;}

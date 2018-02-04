@@ -10,6 +10,8 @@
 #https://github.com/wrzlbrmft/arch-install
 #https://github.com/goldsloam/archinstaller
 #https://github.com/HardenedArray/Encrypted-Arch-UEFI-Installation
+#http://www.saminiir.com/installing-arch-linux-on-dell-xps-15/
+#https://gist.github.com/cblegare/746d37208c611f152137cb60cb14380f
 
 #
 # ** WARNING ** THIS IS WORK-IN-PROGRESS — CLEARLY !! NOT !! intended for any other use than my tinkering w/ an semi-automated Arch install
@@ -40,12 +42,12 @@ sgdisk -p /dev/nvme1n1
 echo "cryptsetup (luks) and lvm..."
 sleep 2
 cryptsetup luksFormat /dev/nvme1n1p2
-cryptsetup --allow-discards luksOpen /dev/nvme1n1p2 lvm
-pvcreate --dataalignment 1m /dev/mapper/lvm
-vgcreate volume /dev/mapper/lvm
-lvcreate -L 100GB volume -n root
-lvcreate -L 16GB volume -n swap
-lvcreate -l 100%FREE volume -n home
+cryptsetup --allow-discards luksOpen /dev/nvme1n1p2 $comp-opsecftw
+pvcreate --dataalignment 1m /dev/mapper/$comp-opsecftw
+vgcreate arch /dev/mapper/$comp-opsecftw
+lvcreate -L 100GB arch -n root
+lvcreate -L 16GB arch -n swap
+lvcreate -l 100%FREE arch -n home
 
 echo "activating lvm..."
 sleep 2
@@ -56,18 +58,18 @@ vgchange -ay
 echo "formatting partitions..."
 sleep 2
 mkfs.fat -F32 /dev/nvme1n1p1
-mkfs.ext4 /dev/volume/root
-mkfs.ext4 /dev/volume/home
-mkswap /dev/volume/swap
-swapon --discard /dev/volume/swap
+mkfs.ext4 /dev/arc/root
+mkfs.ext4 /dev/arc/home
+mkswap /dev/arch/swap
+swapon --discard /dev/arch/swap
 
 echo "mounting drives..."
 sleep 2
-mount -o discard /dev/volume/root /mnt
+mount -o discard /dev/arch/root /mnt
 mkdir /mnt/boot
 mkdir /mnt/home
 mount -o discard /dev/nvme1n1p1 /mnt/boot
-mount -o discard /dev/volume/home /mnt/home
+mount -o discard /dev/arch/home /mnt/home
 
 pacstrap /mnt base base-devel
 
