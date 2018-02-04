@@ -20,7 +20,7 @@ systemctl start NetworkManager
 
 echo "initramfs creation..."
 sleep 5
-file=/mnt/archbox/etc/mkinitcpio.conf
+file=/etc/mkinitcpio.conf
 search="^\s*HOOKS=.*$"
 replace="HOOKS=\\\"base udev autodetect modconf block keymap encrypt lvm2 filesystems keyboard shutdown fsck usr\\\""
 grep -q "$search" "$file" && sed -i "s#$search#$replace#" "$file" || echo "$replace" >> "$file"
