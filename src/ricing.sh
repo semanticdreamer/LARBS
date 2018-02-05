@@ -7,10 +7,10 @@ sudo pacman -Syy
 sudo pacman -Su
 
 # fix network-manager-applet not asking for wifi pwd
-sudo pacman -S gnome-keyring
+sudo pacman -S --noconfirm --needed gnome-keyring
 
 # essentials
-sudo pacman -S rsync git subversion cvd mercurial unzip unrar wget curl base-devel 
+sudo pacman -S --noconfirm --needed rsync git subversion cvd mercurial unzip unrar wget curl base-devel 
 
 # install yaourt
 cd /tmp/
@@ -23,55 +23,55 @@ cd yaourt && makepkg -si
 cd -
 
 # system tools
-yaourt -S vtop
+yaourt -S --noconfirm --needed vtop
 
 # internet
-sudo pacman -S firefox firefox-i18n-de
-sudo pacman -S thunderbird thunderbird-i18n-de
-sudo pacman -S chromium google-chrome google-talkplugin
-yaourt -S skypeforlinux-bin
-sudo pacman -S transmission-gtk
-sudo pacman -S filezilla
-yaourt -S slack-desktop
-yaourt -S zoom
+sudo pacman -S --noconfirm --needed firefox firefox-i18n-de
+sudopacman -S --noconfirm --needed thunderbird thunderbird-i18n-de
+sudo pacman -S --noconfirm --needed chromium google-chrome google-talkplugin
+yaourt -S --noconfirm --needed skypeforlinux-bin
+sudo pacman -S --noconfirm --needed transmission-gtk
+sudo pacman -S --noconfirm --needed filezilla
+yaourt -S --noconfirm --needed slack-desktop
+yaourt -S --noconfirm --needed zoom
 
 # devel
 yaourt -Sy visual-studio-code-bin
 gpg --recv-keys --keyserver hkp://18.9.60.141 5CC908FDB71E12C2
-yaourt -S gitkraken
-yaourt -S robo3t-bin
-yaourt -S dbeaver
-yaourt -S postman-bin
-sudo pacman -S sqlite sqlitebrowser
-sudo pacman -S mysql-workbench
+yaourt -S --noconfirm --needed gitkraken
+yaourt -S --noconfirm --needed robo3t-bin
+yaourt -S --noconfirm --needed dbeaver
+yaourt -S --noconfirm --needed postman-bin
+sudo pacman -S --noconfirm --needed sqlite sqlitebrowser
+sudo pacman -S --noconfirm --needed mysql-workbench
 
 # lang
-sudo pacman -S nodejs npm
-sudo pacman -S jdk8-openjdk openjdk8-doc
-sudo pacman -S apache-ant
-sudo pacman -S maven
-sudo pacman -S php php-composer php-gd
+sudo pacman -S --noconfirm --needed nodejs npm
+sudo pacman -S --noconfirm --needed jdk8-openjdk openjdk8-doc
+sudo pacman -S --noconfirm --needed apache-ant
+sudo pacman -S --noconfirm --needed maven
+sudo pacman -S --noconfirm --needed php php-composer php-gd
 
 # docker
-sudo pacman -S docker docker-compose
+sudo pacman -S --noconfirm --needed docker docker-compose
 sudo gpasswd -a $USER docker
 
 # graphics
-sudo pacman -S gimp gimp-help-de
-yaourt -S gimp-plugin-saveforweb
-sudo pacman -S shutter
+sudo pacman -S --noconfirm --needed gimp gimp-help-de
+yaourt -S --noconfirm --needed gimp-plugin-saveforweb
+sudo pacman -S --noconfirm --needed shutter
 
 # notes
-yaourt -S simplenote-electron-bin
+yaourt -S --noconfirm --needed simplenote-electron-bin
 
 # media
-yaourt -S spotify
+yaourt -S --noconfirm --needed spotify
 
 # tools
-yaourt -S etcher etcher-cli
+yaourt -S --noconfirm --needed etcher etcher-cli
 
 # arduino, embedded et al.
-yaourt -S arduino
+yaourt -S --noconfirm --needed arduino
 sudo gpasswd -a $USER lock
 sudo gpasswd -a $USER uucp
-yaourt -S fritzing
+yaourt -S --noconfirm --needed fritzing
