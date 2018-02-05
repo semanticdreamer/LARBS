@@ -78,9 +78,9 @@ yaourt -S --noconfirm --needed spotify
 # tools
 yaourt -S --noconfirm --needed etcher etcher-cli
 
-# nitrokey
-sudo pacman -S --noconfirm --needed  ccid
-yaourt -S --noconfirm --needed nitrokey-app
+# nitrokey —— currently broken, because  dep on git repo
+#sudo pacman -S --noconfirm --needed  ccid
+#yaourt -S --noconfirm --needed nitrokey-app
 
 # arduino, embedded et al.
 yaourt -S --noconfirm --needed arduino
