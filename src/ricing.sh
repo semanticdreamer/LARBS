@@ -36,7 +36,7 @@ yaourt -S --noconfirm --needed slack-desktop
 yaourt -S --noconfirm --needed zoom
 
 # devel
-yaourt -Sy visual-studio-code-bin
+yaourt -S --noconfirm --needed visual-studio-code-bin
 gpg --recv-keys --keyserver hkp://18.9.60.141 5CC908FDB71E12C2
 yaourt -S --noconfirm --needed gitkraken
 yaourt -S --noconfirm --needed robo3t-bin
