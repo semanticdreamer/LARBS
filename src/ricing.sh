@@ -28,7 +28,8 @@ yaourt -S --noconfirm --needed vtop
 # internet
 sudo pacman -S --noconfirm --needed firefox firefox-i18n-de
 sudopacman -S --noconfirm --needed thunderbird thunderbird-i18n-de
-sudo pacman -S --noconfirm --needed chromium google-chrome google-talkplugin
+yaourt -S --noconfirm --needed google-chrome google-talkplugin
+sudo pacman -S --noconfirm --needed chromium
 yaourt -S --noconfirm --needed skypeforlinux-preview-bin
 sudo pacman -S --noconfirm --needed transmission-gtk
 sudo pacman -S --noconfirm --needed filezilla
