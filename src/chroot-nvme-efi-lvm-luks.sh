@@ -7,8 +7,10 @@ ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 hwclock --systohc --utc
 
 echo "en_DK.UTF-8 UTF-8" >> /etc/locale.gen
-echo "en_DK.ISO-8859-1 ISO-8859-1" >> /etc/locale.gen
 locale-gen
+echo "LANG=en_DK.UTF-8" > /etc/locale.conf
+localectl set-keymap de-latin1-nodeadkeys
+localectl set-x11-keymap de-latin1-nodeadkeys
 
 pacman --noconfirm --needed -S networkmanager intel-ucode dosfstools efibootmgr
 systemctl enable NetworkManager
