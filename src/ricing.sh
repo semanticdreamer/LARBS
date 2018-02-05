@@ -67,7 +67,7 @@ sudo gpasswd -a $USER docker
 # graphics
 sudo pacman -S --noconfirm --needed gimp gimp-help-de
 yaourt -S --noconfirm --needed gimp-plugin-saveforweb
-sudo pacman -S --noconfirm --needed shutter
+yaourt -S --noconfirm --needed shutter
 
 # notes
 yaourt -S --noconfirm --needed simplenote-electron-bin
