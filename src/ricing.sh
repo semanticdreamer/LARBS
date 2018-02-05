@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# sync packages
+# download fresh package databases
 sudo pacman -Syy
 
 # full system upgrade
@@ -13,14 +13,21 @@ sudo pacman -S --noconfirm --needed gnome-keyring
 sudo pacman -S --noconfirm --needed rsync git subversion cvd mercurial unzip unrar wget curl base-devel 
 
 # install yaourt
-cd /tmp/
-git clone https://aur.archlinux.org/package-query.git
-cd package-query && makepkg -si && cd -
+if pacman -Qs yaourt > /dev/null ; then
+  echo "yaourt is already installed"
+else
+  cd /tmp/
+  git clone https://aur.archlinux.org/package-query.git
+  cd package-query && makepkg -si && cd -
+fi
 
-cd /tmp/
-git clone https://aur.archlinux.org/yaourt.git
-cd yaourt && makepkg -si
-cd -
+if pacman -Qs package-query > /dev/null ; then
+  echo "package-query is already installed"
+else
+    cd /tmp/
+    git clone https://aur.archlinux.org/yaourt.git
+    cd yaourt && makepkg -si && cd -
+fi
 
 # system tools
 yaourt -S --noconfirm --needed vtop
