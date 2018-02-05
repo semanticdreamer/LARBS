@@ -29,7 +29,7 @@ yaourt -S --noconfirm --needed vtop
 sudo pacman -S --noconfirm --needed firefox firefox-i18n-de
 sudopacman -S --noconfirm --needed thunderbird thunderbird-i18n-de
 sudo pacman -S --noconfirm --needed chromium google-chrome google-talkplugin
-yaourt -S --noconfirm --needed skypeforlinux-bin
+yaourt -S --noconfirm --needed skypeforlinux-preview-bin
 sudo pacman -S --noconfirm --needed transmission-gtk
 sudo pacman -S --noconfirm --needed filezilla
 yaourt -S --noconfirm --needed slack-desktop
