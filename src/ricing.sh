@@ -10,7 +10,7 @@ sudo pacman -Su
 sudo pacman -S --noconfirm --needed gnome-keyring
 
 # essentials
-sudo pacman -S --noconfirm --needed rsync git subversion cvd mercurial unzip unrar wget curl base-devel 
+sudo pacman -S --noconfirm --needed rsync git subversion cvs mercurial unzip unrar wget curl base-devel 
 
 # install yaourt
 if pacman -Qs yaourt > /dev/null ; then
