@@ -33,7 +33,7 @@ fi
 yaourt -S --noconfirm --needed vtop
 
 # internet
-sudo pacman -S --noconfirm --needed firefox firefox-i18n-de
+sudo pacman -S --noconfirm --needed firefox firefox-i18n-de firefox-developer-edition
 sudopacman -S --noconfirm --needed thunderbird thunderbird-i18n-de
 yaourt -S --noconfirm --needed google-chrome google-talkplugin
 sudo pacman -S --noconfirm --needed chromium
