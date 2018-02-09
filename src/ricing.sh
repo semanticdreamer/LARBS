@@ -68,6 +68,8 @@ yaourt -S --noconfirm --needed aws-cli-git
 # docker
 sudo pacman -S --noconfirm --needed docker docker-compose
 sudo gpasswd -a $USER docker
+sudo systemctl enable docker
+sudo systemctl start docker
 
 # graphics
 sudo pacman -S --noconfirm --needed gimp gimp-help-de
