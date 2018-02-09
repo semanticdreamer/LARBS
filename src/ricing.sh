@@ -55,10 +55,15 @@ sudo pacman -S --noconfirm --needed mysql-workbench
 
 # lang
 sudo pacman -S --noconfirm --needed nodejs npm
+sudo pacman -S --noconfirm --needed go go-tools
 sudo pacman -S --noconfirm --needed jdk8-openjdk openjdk8-doc
 sudo pacman -S --noconfirm --needed apache-ant
 sudo pacman -S --noconfirm --needed maven
 sudo pacman -S --noconfirm --needed php php-composer php-gd
+
+# cloud
+yaourt -S --noconfirm --needed scaleway-cli
+yaourt -S --noconfirm --needed aws-cli-git
 
 # docker
 sudo pacman -S --noconfirm --needed docker docker-compose
