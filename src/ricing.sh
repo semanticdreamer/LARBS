@@ -83,9 +83,6 @@ yaourt -S --noconfirm --needed simplenote-electron-bin
 # media
 yaourt -S --noconfirm --needed spotify
 
-# tools
-yaourt -S --noconfirm --needed etcher etcher-cli
-
 # nitrokey —— currently broken, because  dep on git repo
 #sudo pacman -S --noconfirm --needed  ccid
 #yaourt -S --noconfirm --needed nitrokey-app
@@ -95,3 +92,6 @@ yaourt -S --noconfirm --needed arduino
 sudo gpasswd -a $USER lock
 sudo gpasswd -a $USER uucp
 yaourt -S --noconfirm --needed fritzing
+
+# tools
+sudo npm install -g etcher-cli
