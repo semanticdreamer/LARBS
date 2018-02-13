@@ -52,6 +52,7 @@ yaourt -S --noconfirm --needed dbeaver
 yaourt -S --noconfirm --needed postman-bin
 sudo pacman -S --noconfirm --needed sqlite sqlitebrowser
 sudo pacman -S --noconfirm --needed mysql-workbench
+yaourt -S --noconfirm --needed rstudio-desktop-bin
 
 # lang
 sudo pacman -S --noconfirm --needed nodejs npm
