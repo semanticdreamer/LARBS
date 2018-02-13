@@ -104,7 +104,7 @@ cat /mnt/etc/fstab | sed -e 's/relatime/noatime/' > /tmp/fstab
 cat /tmp/fstab > /mnt/etc/fstab
 rm /tmp/fstab
 
-curl https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/chroot-nvme-efi-lvm-luks.sh > /mnt/chroot.sh && arch-chroot /mnt bash chroot.sh && rm /mnt/chroot.sh
+curl https://raw.githubusercontent.com/semanticdreamer/LARBS/master/src/chroot-nvme-efi-lvm-luks.sh > /mnt/chroot.sh && cp idevice /mnt/idevice && arch-chroot /mnt bash chroot.sh && rm /mnt/chroot.sh && rm /mnt/idevice
 
 cat comp > /mnt/etc/hostname && rm comp
 
