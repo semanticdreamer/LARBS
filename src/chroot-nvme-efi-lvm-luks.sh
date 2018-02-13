@@ -30,7 +30,7 @@ bootctl --path=/boot install
 > /boot/loader/loader.conf
 echo "default arch" >> /boot/loader/loader.conf
 echo "timeout 5" >> /boot/loader/loader.conf
-LUKS_UUID="$(cryptsetup luksUUID $(cat idevice))"
+LUKS_UUID="$(cryptsetup luksUUID $(cat idevice)p2)"
 touch /boot/loader/entries/arch.conf
 echo "title Arch Linux" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
