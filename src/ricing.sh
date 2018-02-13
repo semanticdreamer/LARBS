@@ -13,7 +13,7 @@ sudo pacman -S --noconfirm --needed gnome-keyring
 sudo pacman -S --noconfirm --needed openssh rsync git subversion cvs mercurial unzip unrar wget curl base-devel 
 
 # install yaourt
-if pacman -Qs yaourt > /dev/null ; then
+if pacman -Qs package-query > /dev/null ; then
   echo "yaourt is already installed"
 else
   cd /tmp/
@@ -21,7 +21,7 @@ else
   cd package-query && makepkg -si && cd -
 fi
 
-if pacman -Qs package-query > /dev/null ; then
+if pacman -Qs yaourt > /dev/null ; then
   echo "package-query is already installed"
 else
     cd /tmp/
@@ -34,7 +34,7 @@ yaourt -S --noconfirm --needed vtop
 
 # internet
 sudo pacman -S --noconfirm --needed firefox firefox-i18n-de firefox-developer-edition
-sudopacman -S --noconfirm --needed thunderbird thunderbird-i18n-de
+sudo pacman -S --noconfirm --needed thunderbird thunderbird-i18n-de
 yaourt -S --noconfirm --needed google-chrome google-talkplugin
 sudo pacman -S --noconfirm --needed chromium
 yaourt -S --noconfirm --needed skypeforlinux-preview-bin
