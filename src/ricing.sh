@@ -80,12 +80,15 @@ yaourt -S --noconfirm --needed shutter
 
 # writing
 yaourt -S --noconfirm --needed simplenote-electron-bin
-
-yaourt -S --noconfirm --needed stack-bin
-cd /tmp
-git clone https://github.com/jodonoghue/pandoc-plantuml-filter.git
-cd pandoc-plantuml-filter/
-stack install && cd -
+if [ ! -f ~/.local/bin/pandoc-plantuml-filter ]; then
+  echo "pandoc-plantuml-filter is already installed"
+else
+  yaourt -S --noconfirm --needed stack-bin
+  cd /tmp
+  git clone https://github.com/jodonoghue/pandoc-plantuml-filter.git
+  cd pandoc-plantuml-filter/
+  stack install && cd -
+fi
 
 # media
 yaourt -S --noconfirm --needed spotify
