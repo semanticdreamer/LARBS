@@ -80,7 +80,12 @@ yaourt -S --noconfirm --needed shutter
 
 # writing
 yaourt -S --noconfirm --needed simplenote-electron-bin
-yaourt -S --noconfirm --needed pandoc-plantuml-filter-git
+
+yaourt -S --noconfirm --needed stack-bin
+cd /tmp
+git clone https://github.com/jodonoghue/pandoc-plantuml-filter.git
+cd pandoc-plantuml-filter/
+stack install && cd -
 
 # media
 yaourt -S --noconfirm --needed spotify
