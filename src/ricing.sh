@@ -95,3 +95,6 @@ yaourt -S --noconfirm --needed fritzing
 
 # tools
 sudo npm install -g etcher-cli
+
+# power
+sudo pacman -S --noconfirm --needed acpi_call powertop x86_energy_perf_policy
