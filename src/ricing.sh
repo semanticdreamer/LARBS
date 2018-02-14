@@ -77,8 +77,9 @@ sudo pacman -S --noconfirm --needed gimp gimp-help-de
 yaourt -S --noconfirm --needed gimp-plugin-saveforweb
 yaourt -S --noconfirm --needed shutter
 
-# notes
+# writing
 yaourt -S --noconfirm --needed simplenote-electron-bin
+yaourt -S --noconfirm --needed pandoc-plantuml-filter-git
 
 # media
 yaourt -S --noconfirm --needed spotify
