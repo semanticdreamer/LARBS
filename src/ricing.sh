@@ -42,6 +42,7 @@ sudo pacman -S --noconfirm --needed transmission-gtk
 sudo pacman -S --noconfirm --needed filezilla
 yaourt -S --noconfirm --needed slack-desktop
 yaourt -S --noconfirm --needed zoom
+yaourt -S --noconfirm --needed keybase-bin
 
 # devel
 yaourt -S --noconfirm --needed visual-studio-code-bin
