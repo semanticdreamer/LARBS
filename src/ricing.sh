@@ -29,8 +29,8 @@ else
     cd yaourt && makepkg -si && cd -
 fi
 
-# system tools
-yaourt -S --noconfirm --needed vtop
+# essential system tools
+yaourt -S --noconfirm --needed vtop dnsutils
 
 # internet
 sudo pacman -S --noconfirm --needed firefox firefox-i18n-de firefox-developer-edition
