@@ -105,3 +105,10 @@ sudo pacman -S --noconfirm --needed acpi_call powertop x86_energy_perf_policy
 # bluetooth
 sudo pacman -S --noconfirm --needed bluez bluez-utils blueman
 sudo systemctl enable bluetooth.service
+
+# printer
+sudo pacman -S --noconfirm --needed cups 
+sudo systemctl enable org.cups.cupsd.service
+sudo systemctl start org.cups.cupsd.service
+sudo pacman -S --noconfirm --needed hplip
+sudo pacman -S --noconfirm --needed system-config-printer
