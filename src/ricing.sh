@@ -80,6 +80,7 @@ yaourt -S --noconfirm --needed shutter
 
 # writing
 yaourt -S --noconfirm --needed simplenote-electron-bin
+yaourt -S --noconfirm --needed plantuml
 sudo npm install pandoc-plantuml-filter -g
 
 # media
