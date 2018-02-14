@@ -62,6 +62,7 @@ sudo pacman -S --noconfirm --needed jdk8-openjdk openjdk8-doc
 sudo pacman -S --noconfirm --needed apache-ant
 sudo pacman -S --noconfirm --needed maven
 sudo pacman -S --noconfirm --needed php php-composer php-gd
+sudo pacman -S --noconfirm --needed python-pip
 
 # cloud
 yaourt -S --noconfirm --needed scaleway-cli
