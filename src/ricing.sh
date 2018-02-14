@@ -9,6 +9,16 @@ sudo pacman -Su
 # fix network-manager-applet not asking for wifi pwd
 sudo pacman -S --noconfirm --needed gnome-keyring
 
+# intel video
+sudo pacman -S --noconfirm --needed xf86-video-intel
+
+# power
+sudo pacman -S --noconfirm --needed acpi_call powertop x86_energy_perf_policy
+
+# bluetooth
+sudo pacman -S --noconfirm --needed bluez bluez-utils blueman
+sudo systemctl enable bluetooth.service
+
 # essentials
 sudo pacman -S --noconfirm --needed openssh rsync git subversion cvs mercurial unzip unrar wget curl base-devel 
 
@@ -98,13 +108,6 @@ yaourt -S --noconfirm --needed fritzing
 
 # tools
 sudo npm install -g etcher-cli
-
-# power
-sudo pacman -S --noconfirm --needed acpi_call powertop x86_energy_perf_policy
-
-# bluetooth
-sudo pacman -S --noconfirm --needed bluez bluez-utils blueman
-sudo systemctl enable bluetooth.service
 
 # printer
 sudo pacman -S --noconfirm --needed cups 
