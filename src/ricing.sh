@@ -100,10 +100,6 @@ yaourt -S --noconfirm --needed plantuml
 # media
 yaourt -S --noconfirm --needed spotify
 
-# nitrokey —— currently broken, because  dep on git repo
-#sudo pacman -S --noconfirm --needed  ccid
-#yaourt -S --noconfirm --needed nitrokey-app
-
 # arduino, embedded et al.
 yaourt -S --noconfirm --needed arduino
 sudo gpasswd -a $USER lock
@@ -120,7 +116,11 @@ sudo systemctl start org.cups.cupsd.service
 sudo pacman -S --noconfirm --needed hplip
 sudo pacman -S --noconfirm --needed system-config-printer
 
-# devices
+# nitrokey
+sudo pacman -S --noconfirm --needed  ccid
+yaourt -S --noconfirm --needed nitrokey-app
+
+# signet
 if [ ! -f ~/.config/Scripts/signet ]; then
   cd /tmp
   curl -LO https://nthdimtech.com/downloads/signet-releases/0.9.8/gnu-linux/signet-0.9.8.1
