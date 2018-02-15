@@ -119,3 +119,9 @@ sudo systemctl enable org.cups.cupsd.service
 sudo systemctl start org.cups.cupsd.service
 sudo pacman -S --noconfirm --needed hplip
 sudo pacman -S --noconfirm --needed system-config-printer
+
+# devices
+cd /tmp
+curl -LO https://nthdimtech.com/downloads/signet-releases/0.9.8/gnu-linux/signet-0.9.8.1
+chmod u+x signet-0.9.8.1
+mv signet-0.9.8.1 ~/.config/Scripts/signet && cd -
