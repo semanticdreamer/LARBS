@@ -90,6 +90,9 @@ sudo pacman -S --noconfirm --needed gimp gimp-help-de
 yaourt -S --noconfirm --needed gimp-plugin-saveforweb
 yaourt -S --noconfirm --needed shutter
 
+# video
+sudo pacman -S --noconfirm --needed vlc
+
 # writing
 yaourt -S --noconfirm --needed simplenote-electron-bin
 yaourt -S --noconfirm --needed plantuml
