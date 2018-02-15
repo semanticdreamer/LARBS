@@ -117,6 +117,11 @@ sudo pacman -S --noconfirm --needed hplip
 sudo pacman -S --noconfirm --needed system-config-printer
 
 # nitrokey
+if [ ! -f /etc/udev/rules.d/41-nitrokey.rules ]; then
+  cd /tmp
+  curl -LO https://www.nitrokey.com/sites/default/files/41-nitrokey.rules
+  sudo mv 41-nitrokey.rules /etc/udev/rules.d/ && cd -
+fi
 sudo pacman -S --noconfirm --needed  ccid
 yaourt -S --noconfirm --needed nitrokey-app
 
