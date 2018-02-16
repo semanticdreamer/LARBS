@@ -137,3 +137,12 @@ if [ ! -f /etc/udev/rules.d/50-signet.rules ]; then
   curl -LO https://nthdimtech.com/downloads/signet-releases/0.9.8/gnu-linux/50-signet.rules
   sudo mv 50-signet.rules /etc/udev/rules.d/ && cd -
 fi
+
+# Perkeep (née Camlistore)
+if [ ! -d ~/Code/perkeep ]; then
+  mkdir -p ~/Code
+  cd ~/Code
+  git clone https://github.com/perkeep/perkeep.git
+  cd -
+fi
+cd ~/Code/perkeep && git pull && go run make.go
