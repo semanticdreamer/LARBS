@@ -20,7 +20,7 @@ sudo pacman -S --noconfirm --needed bluez bluez-utils blueman
 sudo systemctl enable bluetooth.service
 
 # essentials
-sudo pacman -S --noconfirm --needed openssh rsync git subversion cvs mercurial unzip unrar wget curl base-devel
+sudo pacman -S --noconfirm --needed openssh rsync git subversion cvs mercurial unzip unrar wget curl base-devel cdrkit
 
 # install yaourt
 if pacman -Qs package-query > /dev/null ; then
