@@ -146,3 +146,7 @@ if [ ! -d ~/Code/perkeep ]; then
   cd -
 fi
 cd ~/Code/perkeep && git pull && go run make.go
+ln -sf ~/Code/perkeep/bin/camget ~/.config/Scripts/
+ln -sf ~/Code/perkeep/bin/camlistored ~/.config/Scripts/
+ln -sf ~/Code/perkeep/bin/camput ~/.config/Scripts/
+ln -sf ~/Code/perkeep/bin/camtool ~/.config/Scripts/
