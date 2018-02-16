@@ -65,6 +65,14 @@ yaourt -S --noconfirm --needed postman-bin
 sudo pacman -S --noconfirm --needed sqlite sqlitebrowser
 sudo pacman -S --noconfirm --needed mysql-workbench
 yaourt -S --noconfirm --needed rstudio-desktop-bin
+if [ ! -d ~/Code/plantumlqeditor ]; then
+  mkdir -p ~/Code
+  cd ~/Code
+  git clone https://github.com/borco/plantumlqeditor.git
+  cd -
+fi
+cd ~/Code/plantumlqeditor && cmake && make
+ln -sf ~/Code/plantumlqeditor/plantumlqeditor ~/.config/Scripts/
 
 # lang
 sudo pacman -S --noconfirm --needed nodejs npm
