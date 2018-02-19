@@ -118,11 +118,15 @@ yaourt -S --noconfirm --needed fritzing
 sudo npm install -g etcher-cli
 
 # printer
-sudo pacman -S --noconfirm --needed cups 
+sudo pacman -S --noconfirm --needed cups
 sudo systemctl enable org.cups.cupsd.service
 sudo systemctl start org.cups.cupsd.service
 sudo pacman -S --noconfirm --needed hplip
 sudo pacman -S --noconfirm --needed system-config-printer
+
+# scanner
+sudo pacman -S --noconfirm --needed sane
+sudo pacman -S --noconfirm --needed simple-scan
 
 # nitrokey
 if [ ! -f /etc/udev/rules.d/41-nitrokey.rules ]; then
