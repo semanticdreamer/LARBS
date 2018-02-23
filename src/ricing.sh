@@ -19,6 +19,9 @@ sudo pacman -S --noconfirm --needed acpi_call powertop x86_energy_perf_policy
 sudo pacman -S --noconfirm --needed bluez bluez-utils blueman
 sudo systemctl enable bluetooth.service
 
+# backlight
+yaourt -S --noconfirm --needed acpilight
+
 # essentials
 sudo pacman -S --noconfirm --needed openssh rsync git subversion cvs mercurial unzip unrar wget curl base-devel cdrkit
 
