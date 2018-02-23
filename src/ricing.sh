@@ -168,3 +168,6 @@ ln -sf ~/Code/perkeep/bin/camtool ~/.config/Scripts/
 
 # clipboard manager
 yaourt -S --noconfirm --needed clipit
+
+# GPS
+yaourt -S --noconfirm --needed mytourbook_bin
