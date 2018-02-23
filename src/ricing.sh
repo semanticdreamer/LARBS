@@ -165,3 +165,6 @@ ln -sf ~/Code/perkeep/bin/camget ~/.config/Scripts/
 ln -sf ~/Code/perkeep/bin/camlistored ~/.config/Scripts/
 ln -sf ~/Code/perkeep/bin/camput ~/.config/Scripts/
 ln -sf ~/Code/perkeep/bin/camtool ~/.config/Scripts/
+
+# clipboard manager
+yaourt -S --noconfirm --needed clipit
