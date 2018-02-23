@@ -140,9 +140,9 @@ yaourt -S --noconfirm --needed nitrokey-app
 # signet
 if [ ! -f ~/.config/Scripts/signet ]; then
   cd /tmp
-  curl -LO https://nthdimtech.com/downloads/signet-releases/0.9.8/gnu-linux/signet-0.9.8.1
-  chmod u+x signet-0.9.8.1
-  mv signet-0.9.8.1 ~/.config/Scripts/signet && cd -
+  curl -LO https://nthdimtech.com/downloads/signet-releases/0.9.9/gnu-linux/signet-0.9.9
+  chmod u+x signet-0.9.9
+  mv signet-0.9.9 ~/.config/Scripts/signet && cd -
 fi
 if [ ! -f /etc/udev/rules.d/50-signet.rules ]; then
   cd /tmp
