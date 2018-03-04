@@ -112,6 +112,9 @@ yaourt -S --noconfirm --needed plantuml
 # media
 yaourt -S --noconfirm --needed spotify
 
+# pdf
+yaourt -S --noconfirm --needed pdftk
+
 # arduino, embedded et al.
 yaourt -S --noconfirm --needed arduino
 sudo gpasswd -a $USER lock
