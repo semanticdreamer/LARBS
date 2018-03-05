@@ -12,6 +12,9 @@ sudo pacman -S --noconfirm --needed gnome-keyring
 # Connect to IPsec VPNs, Cisco compatible
 sudo pacman -S --noconfirm --needed networkmanager-vpnc
 
+# networking, remote access
+sudo pacman -S --noconfirm --needed freerdp
+
 # intel video
 sudo pacman -S --noconfirm --needed xf86-video-intel
 
