@@ -13,7 +13,7 @@ sudo pacman -S --noconfirm --needed gnome-keyring
 sudo pacman -S --noconfirm --needed networkmanager-vpnc
 
 # networking, remote access
-sudo pacman -S --noconfirm --needed freerdp
+sudo pacman -S --noconfirm --needed freerdp rdesktop
 
 # intel video
 sudo pacman -S --noconfirm --needed xf86-video-intel
