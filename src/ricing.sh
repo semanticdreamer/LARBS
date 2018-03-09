@@ -73,6 +73,15 @@ yaourt -S --noconfirm --needed robo3t-bin
 yaourt -S --noconfirm --needed dbeaver
 yaourt -S --noconfirm --needed postman-bin
 sudo pacman -S --noconfirm --needed sqlite sqlitebrowser
+
+# SQLite's REGEXP calls a user defined function
+# http://www.sqlite.org/lang_expr.html
+# pcre = Perl regular expressions in a loadable module
+yaourt -S --noconfirm --needed sqlite-pcre-git
+if [ ! -f /home/matthias/.sqliterc ]; then
+  echo ".load /usr/lib/sqlite3/pcre.so" > /home/matthias/.sqliterc
+fi
+
 sudo pacman -S --noconfirm --needed mysql-workbench
 yaourt -S --noconfirm --needed rstudio-desktop-bin
 if [ ! -d ~/Code/plantumlqeditor ]; then
