@@ -137,7 +137,9 @@ sudo gpasswd -a $USER uucp
 yaourt -S --noconfirm --needed fritzing
 
 # tools
-sudo npm install -g etcher-cli
+yaourt -S --noconfirm --needed etcher
+sudo ln -s /opt/Etcher/etcher-electron /usr/bin/etcher-electron
+yaourt -S --noconfirm --needed etcher-cli
 
 # printer
 sudo pacman -S --noconfirm --needed cups
