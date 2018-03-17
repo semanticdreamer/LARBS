@@ -116,6 +116,7 @@ sudo systemctl start docker
 sudo pacman -S --noconfirm --needed gimp gimp-help-de
 yaourt -S --noconfirm --needed gimp-plugin-saveforweb
 yaourt -S --noconfirm --needed shutter
+yaourt -S --noconfirm --needed gifski
 
 # video
 sudo pacman -S --noconfirm --needed vlc
