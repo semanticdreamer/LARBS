@@ -149,6 +149,7 @@ yaourt -S --noconfirm --needed etcher
 sudo ln -s /opt/Etcher/etcher-electron /usr/bin/etcher-electron
 yaourt -S --noconfirm --needed etcher-cli
 yaourt -S --noconfirm --needed fman
+yaourt -S --noconfirm --needed geteltorito
 
 # printer
 sudo pacman -S --noconfirm --needed cups
