@@ -6,6 +6,13 @@ sudo pacman -Syy
 # full system upgrade
 sudo pacman -Su
 
+# Adaptec SAS 44300, 48300, 58300 Sequencer Firmware for AIC94xx driver
+yaourt -S --noconfirm --needed aic94xx-firmware
+
+# Driver for Western Digital WD7193, WD7197 and WD7296 SCSI cards
+yaourt -S --noconfirm --needed wd719x-firmware
+
+
 # fix network-manager-applet not asking for wifi pwd
 sudo pacman -S --noconfirm --needed gnome-keyring
 
