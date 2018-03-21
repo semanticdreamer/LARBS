@@ -70,6 +70,7 @@ yaourt -S --noconfirm --needed slack-desktop
 yaourt -S --noconfirm --needed zoom
 yaourt -S --noconfirm --needed keybase-bin
 sudo pacman -S --noconfirm --needed hugo
+yaourt -S --noconfirm --needed crossftp-client
 
 # devel
 yaourt -S --noconfirm --needed visual-studio-code-bin
