@@ -22,8 +22,9 @@ sudo pacman -S --noconfirm --needed networkmanager-vpnc
 # networking, remote access
 sudo pacman -S --noconfirm --needed freerdp rdesktop
 
-# intel video
+# intel video, hardware video acceleration
 sudo pacman -S --noconfirm --needed xf86-video-intel
+sudo pacman -S --noconfirm --needed libva-intel-driver 
 
 # power
 sudo pacman -S --noconfirm --needed acpi_call powertop x86_energy_perf_policy
