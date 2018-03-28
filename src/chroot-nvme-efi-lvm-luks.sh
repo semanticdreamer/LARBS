@@ -36,7 +36,7 @@ echo "title Arch Linux" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /intel-ucode.img" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-echo "options quiet cryptdevice=UUID=$LUKS_UUID:arch:allow-discards root=/dev/mapper/arch-root rw" >> /boot/loader/entries/arch.conf
+echo "options quiet modprobe.blacklist=nouveau cryptdevice=UUID=$LUKS_UUID:arch:allow-discards root=/dev/mapper/arch-root rw" >> /boot/loader/entries/arch.conf
 echo "arch UUID=$LUKS_UUID none luks,discard" > /etc/crypttab
 
 pacman --noconfirm --needed -S dialog
