@@ -12,7 +12,6 @@ yaourt -S --noconfirm --needed aic94xx-firmware
 # Driver for Western Digital WD7193, WD7197 and WD7296 SCSI cards
 yaourt -S --noconfirm --needed wd719x-firmware
 
-
 # fix network-manager-applet not asking for wifi pwd
 sudo pacman -S --noconfirm --needed gnome-keyring
 
@@ -121,11 +120,12 @@ sudo gpasswd -a $USER docker
 sudo systemctl enable docker
 sudo systemctl start docker
 
-# graphics
+# graphics, photos
 sudo pacman -S --noconfirm --needed gimp gimp-help-de
 yaourt -S --noconfirm --needed gimp-plugin-saveforweb
 yaourt -S --noconfirm --needed shutter
 yaourt -S --noconfirm --needed gifski
+sudo pacman -S --noconfirm --needed shotwell
 
 # video
 sudo pacman -S --noconfirm --needed vlc
