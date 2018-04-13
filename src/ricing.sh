@@ -154,6 +154,7 @@ yaourt -S --noconfirm --needed etcher-cli
 yaourt -S --noconfirm --needed fman
 yaourt -S --noconfirm --needed geteltorito
 sudo pacman -S --noconfirm --needed gparted
+sudo pacman -S --noconfirm --needed baobab
 
 # printer
 sudo pacman -S --noconfirm --needed cups
