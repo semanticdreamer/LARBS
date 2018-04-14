@@ -36,7 +36,7 @@ sudo systemctl enable bluetooth.service
 yaourt -S --noconfirm --needed acpilight
 
 # essentials
-sudo pacman -S --noconfirm --needed openssh rsync git subversion cvs mercurial unzip unrar wget curl base-devel cdrkit xsel
+sudo pacman -S --noconfirm --needed openssh rsync git subversion cvs mercurial unzip unrar wget curl base-devel cdrkit xsel autofs
 
 # install yaourt
 if pacman -Qs package-query > /dev/null ; then
