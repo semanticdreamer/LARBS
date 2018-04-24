@@ -155,6 +155,7 @@ yaourt -S --noconfirm --needed fman
 yaourt -S --noconfirm --needed geteltorito
 sudo pacman -S --noconfirm --needed gparted
 sudo pacman -S --noconfirm --needed baobab
+sudo pip install csvkit
 
 # printer
 sudo pacman -S --noconfirm --needed cups
