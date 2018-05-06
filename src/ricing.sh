@@ -82,6 +82,7 @@ yaourt -S --noconfirm --needed dbeaver
 yaourt -S --noconfirm --needed postman-bin
 sudo pacman -S --noconfirm --needed sqlite sqlitebrowser
 yaourt -S --noconfirm --needed git-town
+yaourt -S --noconfirm --needed bat
 
 # SQLite's REGEXP calls a user defined function
 # http://www.sqlite.org/lang_expr.html
