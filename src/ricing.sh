@@ -72,6 +72,7 @@ yaourt -S --noconfirm --needed keybase-bin
 sudo pacman -S --noconfirm --needed hugo
 yaourt -S --noconfirm --needed crossftp-client
 yaourt -S --noconfirm --needed beaker-browser-bin
+sudo snap install winds
 
 # devel
 yaourt -S --noconfirm --needed visual-studio-code-bin
