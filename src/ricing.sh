@@ -193,17 +193,19 @@ if [ ! -f /etc/udev/rules.d/50-signet.rules ]; then
 fi
 
 # Perkeep (née Camlistore)
-if [ ! -d ~/Code/perkeep ]; then
-  mkdir -p ~/Code
-  cd ~/Code
-  git clone https://github.com/perkeep/perkeep.git
+if [ ! -d ~/go/src/perkeep.org ]; then
+  mkdir -p ~/go/src
+  cd ~/go/src
+  git clone https://github.com/perkeep/perkeep.git perkeep.org
   cd -
 fi
-cd ~/Code/perkeep && git pull && go run make.go
-ln -sf ~/Code/perkeep/bin/camget ~/.config/Scripts/
-ln -sf ~/Code/perkeep/bin/camlistored ~/.config/Scripts/
-ln -sf ~/Code/perkeep/bin/camput ~/.config/Scripts/
-ln -sf ~/Code/perkeep/bin/camtool ~/.config/Scripts/
+cd ~/go/src/perkeep.org && git pull && go run make.go
+ln -sf ~/go/bin/perkeepd ~/.config/Scripts/
+ln -sf ~/go/bin/pk ~/.config/Scripts/
+ln -sf ~/go/bin/pk-get ~/.config/Scripts/
+ln -sf ~/go/bin/pk-put ~/.config/Scripts/
+ln -sf ~/go/bin/pk-deploy ~/.config/Scripts/
+ln -sf ~/go/bin/pk-mount ~/.config/Scripts/
 
 # clipboard manager
 yaourt -S --noconfirm --needed clipit
