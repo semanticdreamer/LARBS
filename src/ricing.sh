@@ -158,6 +158,8 @@ yaourt -S --noconfirm --needed geteltorito
 sudo pacman -S --noconfirm --needed gparted
 sudo pacman -S --noconfirm --needed baobab
 sudo pip install csvkit
+yaourt -S --noconfirm --needed snapd
+sudo systemctl enable --now snapd.socket
 
 # printer
 sudo pacman -S --noconfirm --needed cups
