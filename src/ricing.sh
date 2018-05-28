@@ -25,6 +25,9 @@ sudo pacman -S --noconfirm --needed freerdp rdesktop
 sudo pacman -S --noconfirm --needed xf86-video-intel
 sudo pacman -S --noconfirm --needed libva-intel-driver 
 
+# audio
+sudo pacman -S --noconfirm --needed pavucontrol
+
 # power
 sudo pacman -S --noconfirm --needed acpi_call powertop x86_energy_perf_policy
 
