@@ -164,6 +164,7 @@ sudo pacman -S --noconfirm --needed baobab
 sudo pip install csvkit
 yaourt -S --noconfirm --needed snapd
 sudo systemctl enable --now snapd.socket
+sudo pacman -S --noconfirm --needed qrencode
 
 # printer
 sudo pacman -S --noconfirm --needed cups
