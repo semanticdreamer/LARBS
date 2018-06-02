@@ -166,6 +166,7 @@ sudo pip install csvkit
 yaourt -S --noconfirm --needed snapd
 sudo systemctl enable --now snapd.socket
 sudo pacman -S --noconfirm --needed qrencode
+sudo pacman -S --noconfirm --needed nautilus
 
 # printer
 sudo pacman -S --noconfirm --needed cups
