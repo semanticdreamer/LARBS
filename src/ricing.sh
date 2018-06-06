@@ -120,7 +120,7 @@ sudo pacman -S --noconfirm --needed python-pip
 
 # cloud
 yaourt -S --noconfirm --needed scaleway-cli
-yaourt -S --noconfirm --needed aws-cli-git
+sudo pacman -S --noconfirm --needed aws-cli
 
 # docker
 sudo pacman -S --noconfirm --needed docker docker-compose
