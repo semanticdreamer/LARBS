@@ -89,6 +89,7 @@ sudo pacman -S --noconfirm --needed sqlite sqlitebrowser
 yaourt -S --noconfirm --needed git-town
 yaourt -S --noconfirm --needed bat
 sudo pacman -S --noconfirm --needed jq
+sudo npm -g install heroku
 
 # SQLite's REGEXP calls a user defined function
 # http://www.sqlite.org/lang_expr.html
