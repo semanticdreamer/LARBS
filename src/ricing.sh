@@ -189,6 +189,7 @@ if [ ! -f /etc/udev/rules.d/41-nitrokey.rules ]; then
 fi
 sudo pacman -S --noconfirm --needed  ccid
 yaourt -S --noconfirm --needed nitrokey-app
+yaourt -S --noconfirm --needed dfu-programmer
 
 # signet
 if [ ! -f ~/.config/Scripts/signet ]; then
