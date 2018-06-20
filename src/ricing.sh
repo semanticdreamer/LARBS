@@ -59,7 +59,8 @@ else
 fi
 
 # essential system tools
-yaourt -S --noconfirm --needed vtop dnsutils
+yaourt -S --noconfirm --needed dnsutils
+sudo npm i -g vtop-node10
 
 # internet
 sudo pacman -S --noconfirm --needed firefox firefox-i18n-de firefox-developer-edition
