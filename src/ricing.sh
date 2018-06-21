@@ -78,6 +78,7 @@ yaourt -S --noconfirm --needed crossftp-client
 yaourt -S --noconfirm --needed beaker-browser-bin
 yaourt -S --noconfirm --needed brave
 sudo snap install winds
+yaourt -S --noconfirm --needed telegram-desktop-bin
 
 # devel
 yaourt -S --noconfirm --needed visual-studio-code-bin
