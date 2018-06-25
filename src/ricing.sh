@@ -147,6 +147,7 @@ sudo pacman -S --noconfirm --needed vlc
 yaourt -S --noconfirm --needed simplenote-electron-bin
 yaourt -S --noconfirm --needed plantuml
 yaourt -S --noconfirm --needed marp
+yaourt -S --noconfirm --needed marker
 
 # media
 yaourt -S --noconfirm --needed spotify
