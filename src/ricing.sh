@@ -199,13 +199,13 @@ yaourt -S --noconfirm --needed dfu-programmer
 # signet
 if [ ! -f ~/.config/Scripts/signet ]; then
   cd /tmp
-  curl -LO https://nthdimtech.com/downloads/signet-releases/0.9.10/gnu-linux/signet-0.9.10
-  chmod u+x signet-0.9.10
-  mv signet-0.9.10 ~/.config/Scripts/signet && cd -
+  curl -LO https://nthdimtech.com/downloads/signet-releases/0.9.11/gnu-linux/signet-0.9.11
+  chmod u+x signet-0.9.11
+  mv signet-0.9.11 ~/.config/Scripts/signet && cd -
 fi
 if [ ! -f /etc/udev/rules.d/50-signet.rules ]; then
   cd /tmp
-  curl -LO https://nthdimtech.com/downloads/signet-releases/0.9.10/gnu-linux/50-signet.rules
+  curl -LO https://nthdimtech.com/downloads/signet-releases/0.9.11/gnu-linux/50-signet.rules
   sudo mv 50-signet.rules /etc/udev/rules.d/ && cd -
 fi
 
