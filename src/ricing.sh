@@ -186,6 +186,9 @@ sudo pacman -S --noconfirm --needed system-config-printer
 sudo pacman -S --noconfirm --needed sane
 sudo pacman -S --noconfirm --needed simple-scan
 
+#yubikey
+sudo pacman -S --noconfirm --needed libu2f-host 
+
 # nitrokey
 if [ ! -f /etc/udev/rules.d/41-nitrokey.rules ]; then
   cd /tmp
