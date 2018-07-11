@@ -187,6 +187,7 @@ sudo pacman -S --noconfirm --needed sane
 sudo pacman -S --noconfirm --needed simple-scan
 
 #yubikey
+# https://wiki.archlinux.org/index.php/Firefox/Tweaks#Fido_U2F_authentication
 sudo pacman -S --noconfirm --needed libu2f-host 
 
 # nitrokey
