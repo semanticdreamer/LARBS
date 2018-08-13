@@ -162,6 +162,7 @@ yaourt -S --noconfirm --needed arduino
 sudo gpasswd -a $USER lock
 sudo gpasswd -a $USER uucp
 yaourt -S --noconfirm --needed fritzing
+sudo pacman -S --noconfirm --needed cool-retro-term
 
 # tools
 yaourt -S --noconfirm --needed etcher
