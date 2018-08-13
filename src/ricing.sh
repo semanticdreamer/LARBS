@@ -6,6 +6,9 @@ sudo pacman -Syy
 # full system upgrade
 sudo pacman -Su
 
+# clear package cache
+sudo pacman -Sc
+
 # Adaptec SAS 44300, 48300, 58300 Sequencer Firmware for AIC94xx driver
 yaourt -S --noconfirm --needed aic94xx-firmware
 
